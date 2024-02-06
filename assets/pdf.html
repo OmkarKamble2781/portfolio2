@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <!-- google fonts -->
+  <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <title>Responsive Education Flow</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'pappins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+     
+
+    }
+
+    .timeline {
+      max-width: relative;
+      max-width: 1000px;
+
+
+    }
+
+    .container {
+      padding: 10px 10px;
+      position: relative;
+      width: 50%;
+      border-radius: 6px;
+      background-color: blueviolet;
+      animation: movedown 1s linear forwards;
+      opacity: 0;
+
+    }
+    @keyframes movedown {
+      0%{
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100%{
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+    }
+
+
+
+    .container:nth-child(1){
+      animation-delay: 1s;
+    }
+    
+
+    .container:nth-child(2){
+      animation-delay: 2s;
+    }
+    
+
+    .container:nth-child(3){
+      animation-delay: 3s;
+    }
+    
+
+    .container:nth-child(4){
+      animation-delay: 4s;
+    }
+    
+
+    .container:nth-child(5){
+      animation-delay: 5s;
+    }
+
+    .text-box {
+      padding: 20px 20px;
+      background-color: rgb(247, 243, 243);
+      position: relative;
+      border-radius: 6px;
+      font-size: 15px;
+      
+    }
+
+    .left-container {
+      left: 0;
+
+    }
+
+    .right-container {
+      left: 52%;
+
+    }
+    .a {
+      position: absolute;
+      right: -20px;
+      top: 32px;
+      z-index:-20px;
+
+
+    }
+    .b{
+      position: absolute;
+      left: -20px;
+      top: 32px;
+      z-index:-20px;
+    }
+    .timeline::after{
+      content: '';
+      position : absolute;
+      width:4px;
+      height: 25cm;
+      background-color: rgb(0, 3, 2);
+      top: 1cm;
+      left: 50%;
+      margin-left: -2px;
+      z-index: -1px;
+      animation: moveline 6s linear forwards;
+
+    }
+    @keyframes moveline{
+      0%{
+        height:0%;
+      }
+      100%{
+        height: 32cm;
+      }
+    }
+    @media  screen and (max-width : 600px) 
+    {
+      .timeline{
+        margin: 5px auto;
+        margin-bottom: 10px;
+      }
+      .timeline::after{
+        left: 30px;
+        height: 0;
+        width: 4px;
+
+      }
+      .container{
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 25px;
+        margin-bottom: 4px;
+      }
+      .text-box{
+        font-size: 13px;
+        
+
+      }
+      .text-box small{
+        margin-bottom: 10px;
+
+      }
+      .right-container{
+        left:0;
+      }
+      .a, .b{
+        left:23px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="timeline">
+
+    <div class="container left-container"><div class="a">
+      <span class="fa fa-circle"></span></div>
+      <div class="text-box">
+        <i class="fas fa-graduation-cap" style="font-size: 40px;"></i>
+        <h2>SSC</h2>
+        <small>MARCH - 2017</small>
+        <h4>Maharashtra Board</h4>
+
+        <b>Passed With 83.20% </b>
+      </div>
+    </div>
+
+
+    <div class="container right-container"><div class="b">
+      <span class="fa fa-circle"></span></div>
+      <div class="text-box">
+        <i class="fas fa-graduation-cap" style="font-size: 40px;"></i>
+        <h2>HSC</h2>
+        <small>FEBRUARY - 2019</small>
+        <h6>STREAM - COMMERCE</h6>
+        <h4>Maharashtra Board</h4>
+        <b>Passed With 60.00%</b>
+      </div>
+    </div>
+
+
+    <div class="container left-container"><div class="a">
+      <span class="fa fa-circle"></span></div>
+      <div class="text-box">
+        <i class="fas fa-graduation-cap" style="font-size: 40px;"></i>
+
+        <h2>Graduation</h2>
+        <small>2019-2022</small>
+        <h5>Shivaji University (kolhapur)</h5>
+        <h4>Batchlors In Computer Application</h4>
+        <b>Passed With First Class With Distinction 81.56%</b>
+      </div>
+    </div>
+
+
+    <div class="container right-container"><div class="b">
+      <span class="fa fa-circle"></span></div>
+      <div class="text-box">
+        <i class="fas fa-graduation-cap" style="font-size: 40px;"></i>
+        <h2>Graduation</h2>
+        <small>2019-2022</small>
+        <h5>Yashwantrao Chavan Maharashtra Open University ,Nashik</h5>
+
+        <h4>Batchlors In Commerce</h4>
+        <b>
+          <p>Passed With First Class With Distinction 75.00%</p>
+        </b>
+      </div>
+    </div>
+
+    <div class="container left-container"> <div class="a">
+      <span class="fa fa-circle"></span></div>
+      <div class="text-box">
+        <i class="fas fa-graduation-cap" style="font-size: 40px;"></i>
+        <h2> Post-Graduation</h2>
+        <small>2022-2024</small>
+        <h5>Shivaji University (kolhapur)</h5>
+        <h4>Masters In Computer Application</h4>
+        <p>Passed With First Class With Distinction 75.00%</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
